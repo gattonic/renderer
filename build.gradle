@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'de.gattonic'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'de.gattonic.renderer.Renderer'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    baseName = 'ng-renderer'
+    version = '0.1.0'
+}
